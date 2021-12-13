@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, 'Times New Roman', Times, serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 100%;
+    background: rgb(16, 16, 27);
+    color: rgb(189, 132, 206);
+    
+}
+
+
+
+.solarSystem{
+    width: 100%;
+    min-height: 850px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sun{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: rgb(255, 210, 60);
+    border-radius: 50%;
+    box-shadow: 0px 0px 150px rgb(255, 210, 60);
+    position: absolute;
+    
+    
+}
+
+.planet1Orbit{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    position: absolute;
+    top: 250px;
+    
+}
+.planet1{
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(rgb(199, 60, 10), rgb(230, 116, 71));
+    border-radius: 50%;
+    z-index: 10;
+    animation: planetRotate  10s  linear infinite;
+
+    
+    position: absolute;
+}
+
+@keyframes planetRotate{
+    from{
+        transform: rotate(0deg)
+        translateX(200px) rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg) translateX(199px) rotate(-360deg);
+    }
+}
+
