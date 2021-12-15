@@ -38,6 +38,8 @@ body{
     
 }
 
+/*Planeta 1 laranja*/
+
 .planet1Orbit{
     height: 400px;
     width: 400px;
@@ -46,20 +48,68 @@ body{
     position: absolute;
     top: 250px;
     
+    
 }
 .planet1{
     width: 30px;
     height: 30px;
-    background: radial-gradient(rgb(199, 60, 10), rgb(230, 116, 71));
     border-radius: 50%;
     z-index: 10;
-    animation: planetRotate  10s  linear infinite;
+    animation: planet1Translate  10s  linear infinite;
+    position: absolute;
+    box-shadow: 0 0 100px rgb(199, 60, 10);
+}
 
-    
+
+.planet1Child{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 10;
+    background: linear-gradient(rgb(199, 60, 10), rgb(230, 116, 71));
+    animation: planet1Rotate 10s linear infinite;
     position: absolute;
 }
 
-@keyframes planetRotate{
+/*.planet1Moon{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 10;
+    background: radial-gradient(rgb(104, 104, 104), rgb(56, 57, 63));
+    animation: planet1Moon 5s linear infinite;
+    position: absolute;
+}*/
+
+
+/*planeta 2 azul*/
+
+
+.planet2{
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(rgb(23, 9, 153), rgb(27, 96, 223));
+    border-radius: 50%;
+    z-index: 10;
+    position: absolute;
+    animation: planet2Rotate 35s linear infinite;
+    box-shadow: 0 0 100px rgb(23, 9, 153);
+}
+
+.planet2Orbit{
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    position: absolute;
+    top: 150px;
+}
+
+
+
+
+
+@keyframes planet1Translate{
     from{
         transform: rotate(0deg)
         translateX(200px) rotate(0deg);
@@ -69,3 +119,31 @@ body{
     }
 }
 
+
+@keyframes planet1Rotate{
+    from{
+        transform: rotate(90deg);
+    }
+    to{
+        transform: rotate(450deg);
+    }
+}
+
+@keyframes planet1Moon{
+    from{
+        transform: rotate(0deg) translate(10px) ;
+    }
+    to{
+        transform: rotate(360deg) translate(10px) ;
+    }
+}
+
+
+@keyframes planet2Rotate{
+    from{
+        transform: rotate(0deg) translateX(300px) rotate(0deg)
+    }
+    to{
+        transform: rotate(360deg) translateX(300px) rotate(-360deg);
+    }
+}
